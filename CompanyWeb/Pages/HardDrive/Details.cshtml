@@ -1,0 +1,43 @@
+@page
+@model CompanyWeb.Pages.HardDrive.DetailsModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>HardDriveP</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.HardDriveP.DriveName)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.HardDriveP.DriveName)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.HardDriveP.DriveSize)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.HardDriveP.DriveSize)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.HardDriveP.ConnectionInterface)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.HardDriveP.ConnectionInterface.ConnectionInterfaceId)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.HardDriveP.DriveTypeP)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.HardDriveP.DriveTypeP.DriveTypeId)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-page="./Edit" asp-route-id="@Model.HardDriveP?.SerialNumber">Edit</a> |
+    <a asp-page="./Index">Back to List</a>
+</div>
